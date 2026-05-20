@@ -160,12 +160,15 @@
 
 <script>
 
-    const direccion = "Calle Ote. 36 Manzana 046, Unión de Guadalupe, 56605 Chalco de Díaz Covarrubias, Méx.";
+    const direccion = "Príncipe De Paz - Ministerios Ebenezer Chalco";
 
     function abrirFacebook() {
-        const facebookURL = "https://www.facebook.com/share/18ktMoP6Jc/";
-        window.location.href = "fb://facewebmodal/f?href=" + facebookURL;
-
+        const facebookURL =
+            "https://www.facebook.com/PrincipeDePazMinisteriosEbenezerChalco";
+    
+        window.location.href =
+            "fb://facewebmodal/f?href=" + facebookURL;
+    
         setTimeout(() => {
             window.open(facebookURL, '_blank');
         }, 1200);
@@ -182,8 +185,10 @@
     }
 
     function abrirSpotify() {
-        const url = "https://open.spotify.com/episode/2E0mOvu2bqqvFAVLIU0AHj?si=BzwD8RtoRb2KgsCn-JtLZA";
-        window.open(url, '_blank');
+        const spotifyURL =
+            "https://open.spotify.com/search/Centro%20Cristiano%20Principe%20de%20Paz";
+    
+        window.open(spotifyURL, '_blank');
     }
 
     function abrirMaps() {
