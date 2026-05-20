@@ -191,7 +191,11 @@
     }
 
     function abrirUber() {
-        const uberURL = "https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=" + encodeURIComponent(direccion);
+
+        const uberURL =
+            "https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=" +
+            encodeURIComponent("Príncipe De Paz - Ministerios Ebenezer Chalco");
+    
         window.open(uberURL, '_blank');
     }
 
