@@ -172,9 +172,10 @@
     }
 
     function abrirInstagram() {
-        const instagramURL = "https://www.instagram.com/ebenezer_chalco?igsh=MXBneWdua3ZheXduYg==";
-        window.location.href = "instagram://app";
 
+        const instagramURL = "https://www.instagram.com/ebenezer_chalco/";
+        window.location.href = "instagram://user?username=ebenezer_chalco";
+    
         setTimeout(() => {
             window.open(instagramURL, '_blank');
         }, 1200);
