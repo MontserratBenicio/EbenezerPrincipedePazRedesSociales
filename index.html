@@ -54,11 +54,10 @@
             background: white;
             border: 2px solid #1e5aa8;
             color: #1e5aa8;
+            text-decoration: none;
         }
 
         .btn:hover {
-            background: #1e5aa8;
-            color: white;
             transform: translateY(-2px);
         }
 
@@ -66,38 +65,102 @@
             transform: scale(0.97);
         }
 
-        .icon { margin-right: 10px; font-size: 18px; }
+        .icon-img {
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+        }
 
-        /* opcional: estilos por red */
-        .instagram { border-color: #8134AF; color: #8134AF; }
-        .instagram:hover { background: linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4); color: white; border: none; }
+        .facebook {
+            border-color: #1877F2;
+            color: #1877F2;
+        }
 
-        .facebook { border-color: #1e5aa8; }
-        .spotify { border-color: #1DB954; color: #1DB954; }
-        .spotify:hover { background: #1DB954; color: white; border: none; }
+        .facebook:hover {
+            background: #1877F2;
+            color: white;
+        }
+
+        .instagram {
+            border-color: #C13584;
+            color: #C13584;
+        }
+
+        .instagram:hover {
+            background: linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);
+            color: white;
+            border: none;
+        }
+
+        .spotify {
+            border-color: #1DB954;
+            color: #1DB954;
+        }
+
+        .spotify:hover {
+            background: #1DB954;
+            color: white;
+        }
+
+        .maps {
+            border-color: #34A853;
+            color: #34A853;
+        }
+
+        .maps:hover {
+            background: #34A853;
+            color: white;
+        }
+
+        .uber {
+            border-color: #000;
+            color: #000;
+        }
+
+        .uber:hover {
+            background: #000;
+            color: white;
+        }
+
     </style>
 </head>
 
 <body>
 
 <div class="card">
-    <h2>Príncipe de Paz</h2>
+    <h2>Iglesia de Cristo Príncipe de Paz Ebenezer</h2>
     <p>Síguenos en nuestras redes sociales</p>
 
     <button onclick="abrirFacebook()" class="btn facebook">
-        <span class="icon">📘</span> Facebook
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
+        Facebook
     </button>
 
     <button onclick="abrirInstagram()" class="btn instagram">
-        <span class="icon">📸</span> Instagram
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        Instagram
     </button>
 
     <button onclick="abrirSpotify()" class="btn spotify">
-        <span class="icon">🎵</span> Spotify
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
+        Spotify
     </button>
+
+    <button onclick="abrirMaps()" class="btn maps">
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png">
+        Cómo llegar
+    </button>
+
+    <button onclick="abrirUber()" class="btn uber">
+        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png">
+        Pedir Uber
+    </button>
+
 </div>
 
 <script>
+
+    const direccion = "Calle Ote. 36 Manzana 046, Unión de Guadalupe, 56605 Chalco de Díaz Covarrubias, Méx.";
 
     function abrirFacebook() {
         const facebookURL = "https://www.facebook.com/share/18ktMoP6Jc/";
@@ -120,6 +183,16 @@
     function abrirSpotify() {
         const url = "https://open.spotify.com/episode/2E0mOvu2bqqvFAVLIU0AHj?si=BzwD8RtoRb2KgsCn-JtLZA";
         window.open(url, '_blank');
+    }
+
+    function abrirMaps() {
+        const mapsURL = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(direccion);
+        window.open(mapsURL, '_blank');
+    }
+
+    function abrirUber() {
+        const uberURL = "https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=" + encodeURIComponent(direccion);
+        window.open(uberURL, '_blank');
     }
 
 </script>
