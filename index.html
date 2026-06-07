@@ -6,7 +6,6 @@
 <title>Príncipe de Paz</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -15,14 +14,11 @@
 
 body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-
     background-image:url('fondo.png');
     background-size:cover;
-    background-position:60% bottom;
+    background-position:65% bottom;
     background-repeat:no-repeat;
-
     min-height:100vh;
-
     display:flex;
     justify-content:center;
 }
@@ -31,119 +27,95 @@ body::before{
     content:"";
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.15);
+    background:rgba(0,0,0,.12);
     z-index:1;
 }
 
 .contenedor{
     position:relative;
     z-index:2;
-
     width:100%;
-    max-width:500px;
-
-    padding:35px 25px;
+    max-width:430px;
+    padding:25px 18px 0;
 }
 
 .titulo{
     text-align:center;
-    margin-bottom:35px;
+    margin-bottom:16px;
 }
 
 .titulo h1{
     color:white;
-    font-size:38px;
+    font-size:25px;
     font-weight:800;
-    letter-spacing:2px;
-
-    text-shadow:0 3px 15px rgba(0,0,0,.5);
+    line-height:1.05;
+    letter-spacing:1.5px;
+    text-shadow:0 3px 15px rgba(0,0,0,.6);
 }
 
 .titulo p{
     color:white;
-    margin-top:10px;
-    font-size:16px;
-
-    text-shadow:0 3px 15px rgba(0,0,0,.5);
+    margin-top:8px;
+    font-size:10px;
+    text-shadow:0 3px 15px rgba(0,0,0,.6);
 }
 
 .botones{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:9px;
 }
 
 .btn{
     width:100%;
-    height:72px;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-
-    border:2px solid rgba(255,255,255,.35);
-
-    border-radius:24px;
-
+    height:44px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(9px);
+    -webkit-backdrop-filter:blur(9px);
+    border:1.3px solid rgba(255,255,255,.45);
+    border-radius:16px;
     display:flex;
     align-items:center;
     justify-content:center;
-
     color:white;
-
-    font-size:18px;
+    font-size:12px;
     font-weight:600;
-
     cursor:pointer;
-
-    transition:.25s;
-}
-
-.btn:hover{
-    background:rgba(255,255,255,.15);
-    transform:translateY(-2px);
-}
-
-.btn:active{
-    transform:scale(.98);
 }
 
 .icon-img{
-    width:32px;
-    height:32px;
-    margin-right:15px;
+    width:19px;
+    height:19px;
+    margin-right:10px;
 }
 
 @media(max-width:480px){
-
-    body{
-        background-position:65% bottom;
-    }
-
     .contenedor{
-        padding:45px 20px;
+        padding-top:22px;
+        padding-left:14px;
+        padding-right:14px;
+        max-width:390px;
     }
 
     .titulo h1{
-        font-size:30px;
-    }
-
-    .titulo p{
-        font-size:14px;
+        font-size:23px;
     }
 
     .btn{
-        height:64px;
-        font-size:16px;
+        height:40px;
+        font-size:11px;
+        border-radius:15px;
+    }
+
+    .botones{
+        gap:8px;
     }
 
     .icon-img{
-        width:28px;
-        height:28px;
+        width:17px;
+        height:17px;
     }
 }
-
 </style>
 </head>
 
@@ -152,46 +124,34 @@ body::before{
 <div class="contenedor">
 
     <div class="titulo">
-        <h1>IGLESIA DE CRISTO</h1>
-        <h1>PRÍNCIPE DE PAZ</h1>
-        <h1>EBENEZER</h1>
+        <h1>IGLESIA DE CRISTO<br>PRÍNCIPE DE PAZ<br>EBENEZER</h1>
         <p>Síguenos en nuestras redes sociales</p>
     </div>
 
     <div class="botones">
 
         <button onclick="abrirFacebook()" class="btn">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-            alt="Facebook">
+            <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
             Facebook
         </button>
 
         <button onclick="abrirInstagram()" class="btn">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-            alt="Instagram">
+            <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
             Instagram
         </button>
 
         <button onclick="abrirSpotify()" class="btn">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/174/174872.png"
-            alt="Spotify">
+            <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
             Spotify
         </button>
 
         <button onclick="abrirMaps()" class="btn">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png"
-            alt="Maps">
+            <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png">
             Cómo llegar
         </button>
 
         <button onclick="abrirUber()" class="btn">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png"
-            alt="Uber">
+            <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png">
             Pedir Uber
         </button>
 
@@ -200,48 +160,29 @@ body::before{
 </div>
 
 <script>
-
 const direccion = "Príncipe De Paz - Ministerios Ebenezer Chalco";
 
 function abrirFacebook(){
-    window.open(
-        "https://www.facebook.com/share/1DfhQyCYCP/",
-        "_blank"
-    );
+    window.open("https://www.facebook.com/share/1DfhQyCYCP/", "_blank");
 }
 
 function abrirInstagram(){
-    window.open(
-        "https://www.instagram.com/ebenezer_chalco/",
-        "_blank"
-    );
+    window.open("https://www.instagram.com/ebenezer_chalco/", "_blank");
 }
 
 function abrirSpotify(){
-    window.open(
-        "https://open.spotify.com/show/6UhKZrhcGJOQ4Qnvo0kfpK?si=05ac9bb2fadc432a",
-        "_blank"
-    );
+    window.open("https://open.spotify.com/show/6UhKZrhcGJOQ4Qnvo0kfpK?si=05ac9bb2fadc432a", "_blank");
 }
 
 function abrirMaps(){
-
-    const mapsURL =
-        "https://www.google.com/maps/search/?api=1&query=" +
-        encodeURIComponent(direccion);
-
+    const mapsURL = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(direccion);
     window.open(mapsURL, "_blank");
 }
 
 function abrirUber(){
-
-    const uberURL =
-        "https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=" +
-        encodeURIComponent(direccion);
-
+    const uberURL = "https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=" + encodeURIComponent(direccion);
     window.open(uberURL, "_blank");
 }
-
 </script>
 
 </body>
