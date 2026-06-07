@@ -7,7 +7,6 @@
 <title>Iglesia de Cristo Príncipe de Paz</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,11 +18,10 @@ body{
 
     background-image:url('fondo.png');
     background-size:cover;
-    background-position:center;
+    background-position:center bottom;
     background-repeat:no-repeat;
 
     min-height:100vh;
-
     display:flex;
     justify-content:center;
 }
@@ -32,7 +30,8 @@ body::before{
     content:"";
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.25);
+    background:rgba(0,0,0,.18);
+    z-index:1;
 }
 
 .contenedor{
@@ -40,59 +39,96 @@ body::before{
     z-index:2;
 
     width:100%;
-    max-width:500px;
+    max-width:430px;
 
-    padding:25px 20px;
+    padding:35px 28px;
+}
+
+.panel{
+    margin-top:15px;
+
+    padding:28px 22px;
+
+    border:1.5px solid rgba(255,255,255,.45);
+    border-radius:34px;
+
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(4px);
 }
 
 .titulo{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:24px;
 }
 
 .titulo h1{
     color:white;
-    font-size:28px;
-    font-weight:700;
-
-    text-shadow:0 2px 10px rgba(0,0,0,.5);
+    font-size:30px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-shadow:0 3px 12px rgba(0,0,0,.65);
 }
 
 .titulo p{
     color:white;
     margin-top:8px;
     font-size:14px;
-
-    text-shadow:0 2px 10px rgba(0,0,0,.5);
+    text-shadow:0 3px 10px rgba(0,0,0,.65);
 }
 
 .botones{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:15px;
 }
 
 .btn{
     width:100%;
-    height:58px;
+    height:54px;
 
     border:none;
-    border-radius:18px;
+    background:transparent;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:16px;
-    font-weight:600;
+    color:white;
+    font-size:17px;
+    font-weight:700;
 
     cursor:pointer;
-
-    background:rgba(255,255,255,.88);
-
-    backdrop-filter:blur(12px);
+    text-shadow:0 2px 8px rgba(0,0,0,.75);
 
     transition:.25s;
+}
+
+.btn::before{
+    content:"";
+    width:46px;
+    height:6px;
+    border-radius:20px;
+    margin-right:16px;
+}
+
+.facebook::before{
+    background:#0077ff;
+}
+
+.instagram::before{
+    background:#ff2f5f;
+}
+
+.spotify::before{
+    background:#7cff28;
+}
+
+.maps::before{
+    background:#ff7a00;
+}
+
+.uber::before{
+    background:#002b5c;
 }
 
 .btn:hover{
@@ -102,152 +138,112 @@ body::before{
 .icon-img{
     width:24px;
     height:24px;
-    margin-right:12px;
+    margin-right:10px;
 }
 
-.facebook{
-    color:#1877F2;
-}
-
-.instagram{
-    color:#C13584;
-}
-
-.spotify{
-    color:#1DB954;
-}
-
-.maps{
-    color:#34A853;
-}
-
-.uber{
-    color:#000;
-}
-
-.facebook:hover{
-    background:#1877F2;
-    color:white;
-}
-
-.instagram:hover{
-    background:linear-gradient(
-        45deg,
-        #F58529,
-        #DD2A7B,
-        #8134AF,
-        #515BD4
-    );
-    color:white;
-}
-
-.spotify:hover{
-    background:#1DB954;
-    color:white;
-}
-
-.maps:hover{
-    background:#34A853;
-    color:white;
-}
-
-.uber:hover{
-    background:black;
-    color:white;
-}
-
-@media (min-width:768px){
+@media(max-width:480px){
+    body{
+        background-position:center bottom;
+    }
 
     .contenedor{
-        max-width:450px;
-        padding-top:40px;
+        padding:28px 22px;
+    }
+
+    .panel{
+        margin-top:10px;
+        padding:24px 18px;
     }
 
     .titulo h1{
-        font-size:34px;
+        font-size:26px;
+    }
+
+    .btn{
+        height:50px;
+        font-size:15px;
+    }
+
+    .btn::before{
+        width:38px;
+        height:5px;
+        margin-right:12px;
     }
 }
 
-</style>
+@media(min-width:768px){
+    body{
+        background-position:center bottom;
+    }
 
+    .contenedor{
+        max-width:520px;
+        padding-top:50px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <div class="contenedor">
 
-    <div class="titulo">
-        <h1>Príncipe de Paz</h1>
-        <p>Síguenos en nuestras redes sociales</p>
-    </div>
+    <div class="panel">
 
-    <div class="botones">
+        <div class="titulo">
+            <h1>PRÍNCIPE DE PAZ</h1>
+            <p>Síguenos en nuestras redes sociales</p>
+        </div>
 
-        <button onclick="abrirFacebook()" class="btn facebook">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
-            Facebook
-        </button>
+        <div class="botones">
 
-        <button onclick="abrirInstagram()" class="btn instagram">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-            Instagram
-        </button>
+            <button onclick="abrirFacebook()" class="btn facebook">
+                <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
+                Facebook
+            </button>
 
-        <button onclick="abrirSpotify()" class="btn spotify">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
-            Spotify
-        </button>
+            <button onclick="abrirInstagram()" class="btn instagram">
+                <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+                Instagram
+            </button>
 
-        <button onclick="abrirMaps()" class="btn maps">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png">
-            Cómo llegar
-        </button>
+            <button onclick="abrirSpotify()" class="btn spotify">
+                <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
+                Spotify
+            </button>
 
-        <button onclick="abrirUber()" class="btn uber">
-            <img class="icon-img"
-            src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png">
-            Pedir Uber
-        </button>
+            <button onclick="abrirMaps()" class="btn maps">
+                <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png">
+                Cómo llegar
+            </button>
+
+            <button onclick="abrirUber()" class="btn uber">
+                <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png">
+                Pedir Uber
+            </button>
+
+        </div>
 
     </div>
 
 </div>
 
 <script>
-
-const direccion =
-"Príncipe De Paz - Ministerios Ebenezer Chalco";
+const direccion = "Príncipe De Paz - Ministerios Ebenezer Chalco";
 
 function abrirFacebook() {
-
-    window.open(
-        "https://www.facebook.com/share/1DfhQyCYCP/",
-        "_blank"
-    );
+    window.open("https://www.facebook.com/share/1DfhQyCYCP/", "_blank");
 }
 
 function abrirInstagram() {
-
-    window.open(
-        "https://www.instagram.com/ebenezer_chalco/",
-        "_blank"
-    );
+    window.open("https://www.instagram.com/ebenezer_chalco/", "_blank");
 }
 
 function abrirSpotify() {
-
-    window.open(
-        "https://open.spotify.com/show/6UhKZrhcGJOQ4Qnvo0kfpK?si=05ac9bb2fadc432a",
-        "_blank"
-    );
+    window.open("https://open.spotify.com/show/6UhKZrhcGJOQ4Qnvo0kfpK?si=05ac9bb2fadc432a", "_blank");
 }
 
 function abrirMaps() {
-
     const mapsURL =
         "https://www.google.com/maps/search/?api=1&query=" +
         encodeURIComponent(direccion);
@@ -256,16 +252,12 @@ function abrirMaps() {
 }
 
 function abrirUber() {
-
     const uberURL =
         "https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=" +
-        encodeURIComponent(
-            "Príncipe De Paz - Ministerios Ebenezer Chalco"
-        );
+        encodeURIComponent(direccion);
 
     window.open(uberURL, "_blank");
 }
-
 </script>
 
 </body>
