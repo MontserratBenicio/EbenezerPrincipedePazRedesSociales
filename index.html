@@ -140,6 +140,11 @@ body::before{
             Instagram
         </button>
 
+        <button onclick="abrirWhatsApp()" class="btn">
+            <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+            WhatsApp
+        </button>
+
         <button onclick="abrirSpotify()" class="btn">
             <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
             Spotify
@@ -168,6 +173,14 @@ function abrirFacebook(){
 
 function abrirInstagram(){
     window.open("https://www.instagram.com/ebenezer_chalco/", "_blank");
+}
+
+function abrirWhatsApp(){
+    const mensaje = "Hola, me gustaría recibir información sobre la Iglesia Príncipe de Paz.";
+    window.open(
+        "https://wa.me/525512345678?text=" + encodeURIComponent(mensaje),
+        "_blank"
+    );
 }
 
 function abrirSpotify(){
